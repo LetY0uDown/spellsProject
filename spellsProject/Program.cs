@@ -43,7 +43,7 @@ namespace spellsProject
                 if (line[(int)Columns.ImmunityType] == "Acid") //Задание 2
                     File.AppendAllText(@"ProjectFiles\AcidSpells.txt", spellsFile[i] + "\n");
 
-                for (int x = 10; x <= 15; x++)
+                for (int x = 10; x <= 15; x++) //Задание 3
                     if (line[x] != "****") //А если число равно нулю? По логике считать не должно, но мало ли..
                         File.AppendAllText(@"ProjectFiles\" + (Columns)x + ".txt", spellsFile[i] + "\n");
             }
