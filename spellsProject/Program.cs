@@ -19,7 +19,8 @@ namespace spellsProject
     {
         static void Main(string[] args)
         {
-            var spellsFile = File.ReadAllLines(@"ProjectFiles\spells.2da.txt");
+            var spellsFile = File.ReadAllLines("spells.2da.txt");
+            Directory.CreateDirectory("ProjectFiles");
             File.Create(@"ProjectFiles\AcidSpells.txt").Close();
             File.AppendAllLines(@"ProjectFiles\AcidSpells.txt", spellsFile[0..3]);
 
